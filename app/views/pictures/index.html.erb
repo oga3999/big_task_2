@@ -1,0 +1,18 @@
+<section class="main-header">
+  <p class="flash"><%= notice %><%= alert %></p>
+</section>
+
+<div class="container">
+  <div class="row">
+    <% @pictures.each do |picture| %>
+      <div class="one-picture col-md-6 col-md-ofset3 col-sm-10">
+        <div class="picture_box">
+          <p><%= image_tag picture.image.url %></p>
+          <p><%= picture.content %></p>
+          <%= link_to "編集", edit_picture_path(picture.id), class: 'btn btn-default btn-sm btn-success' %>
+          <%= link_to "削除", picture_path(picture.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm btn btn-danger' %>
+        </div>
+      </div>
+    <%end%>
+  </div>
+</div>
