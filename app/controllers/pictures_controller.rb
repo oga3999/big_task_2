@@ -19,6 +19,7 @@ class PicturesController < ApplicationController
     @picture.user_id = current_user.id
     if @picture.save
       redirect_to pictures_path,notice:"写真を投稿しました！"
+      NoticeMailer.sendmail_picture(@picture).deliver
     else
       render 'new'
     end
@@ -39,7 +40,7 @@ class PicturesController < ApplicationController
     @picture.delete
     redirect_to pictures_path,notice:"投稿を削除しました！"
   end
-  
+
   private
   def pictures_params
     params.require(:picture).permit(:content,:image,:image_cache,:remove_image)
