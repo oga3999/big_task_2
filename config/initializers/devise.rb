@@ -6,7 +6,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '70c1b36da697825c1793604b51d4f9ae82aba4fe23942415cab21a314624270cb008851b50555a2e584d309b813fa09fc8a48d45e1bd082b280c820c61e669fb'
+  config.secret_key = '70c1b36da697825c1793604b51d4f9ae82aba4fe23942415cab21a314624270cb008851b50555a2e584d309b813fa09fc8a48d45e1bd082b280c820c61e669fb'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -274,6 +274,7 @@ Devise.setup do |config|
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
+
   if Rails.env.production?
     config.omniauth :facebook, ENV["FACEBOOK_ID_PRODUCTION"], ENV["FACEBOOK_SECRET_PRODUCTION"], scope: 'email', display: 'popup', info_fields: 'name, email'
     config.omniauth :twitter, ENV["TWITTER_ID_PRODUCTION"], ENV["TWITTER_SECRET_PRODUCTION"], scope: 'email', display: 'popup', info_fields: 'name, email'
