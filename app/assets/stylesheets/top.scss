@@ -1,3 +1,27 @@
 // Place all the styles related to the top controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.main-header{
+  position: relative;
+  p, h1 {
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    left: 50%;
+    color: white;
+    font-size: 4em;/*サイズ2倍*/
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin:0;
+    padding:0;
+  }
+}
+
+.main-header img{
+  width: 100%;
+  margin: 0 auto;
+  background-size: cover;
+  background-image: url("top.jpg");
+  background-attachment: fixed;
+}

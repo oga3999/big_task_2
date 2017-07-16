@@ -9,6 +9,10 @@ Rails.application.routes.draw do
 
   resources :pictures, only:[:index, :new, :create, :update, :destroy, :edit]
 
+  authenticated :user do
+     root to: 'pictures#index', as: :user_root
+   end
+
   root 'top#index'
 
   if Rails.env.development?

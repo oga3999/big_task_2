@@ -17,3 +17,11 @@
  img{
    max-width: 100%;
  }
+
+.field{
+  padding-bottom: 3px;
+}
+
+.actions{
+  padding-bottom: 3px;
+}

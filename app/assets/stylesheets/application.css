@@ -13,11 +13,45 @@
  *= require_tree .
  *= require_self
  */
+.navbar{
+  margin: 0px;
+}
+
  .flash {
-   color: white;
+   color: black;
    padding-top: 10px;
  }
 
 .headericon{
   font-size: 20px;
+}
+
+footer {
+  width: 100%;
+  background-color: white;
+  padding: 10px 0 0px 0;
+  margin: auto;
+  padding-bottom: 0px;
+  font-size: 15px;
+  position: absolute;
+  bottom: 0;
+  text-align: right;
+  padding-right: 10px;
+  border: solid #eeeeee 2px;
+  color: gray;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+ height: 100%;
+ margin: auto;
+ text-align: center;
+}
+
+.alert{
+  margin: 0;
 }
